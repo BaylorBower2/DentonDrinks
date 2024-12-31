@@ -5,7 +5,15 @@ import netlify from '@astrojs/netlify';
 export default defineConfig({
   integrations: [tailwind()],
   output: 'server',
+  vite: {
+    build: {
+      rollupOptions: {
+        external: ['@rollup/rollup-linux-x64-gnu']
+      }
+    }
+  },
   adapter: netlify({
-    edgeMiddleware: true
+    edgeMiddleware: true,
+    functionPerRoute: true
   })
 });
