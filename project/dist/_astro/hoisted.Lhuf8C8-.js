@@ -1,1 +1,0 @@
-const o=document.getElementById("menuButton"),d=document.getElementById("closeMenu"),e=document.getElementById("mobileMenu");function t(){e?.classList.toggle("hidden"),document.body.style.overflow=e?.classList.contains("hidden")?"":"hidden"}o?.addEventListener("click",t);d?.addEventListener("click",t);e?.addEventListener("click",n=>{n.target===e&&t()});
